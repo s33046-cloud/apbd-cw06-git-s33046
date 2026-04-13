@@ -33,7 +33,7 @@ public class RoomsController : ControllerBase
         return Ok(rooms);
     }
 
-    [HttpGet]
+    [HttpGet("filter")]
     public ActionResult<IEnumerable<Room>> Filter(
         [FromQuery] int? minCapacity,
         [FromQuery] bool? hasProjector,
